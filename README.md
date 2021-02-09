@@ -31,9 +31,11 @@ a) Dump BD: (test_amasty.sql)  <br>
 
     SELECT * FROM transactions WHERE transaction_id IN (
     SELECT transaction_id FROM (
-    SELECT transaction_id, name FROM transactions, (SELECT persons.id, name FROM persons, cities WHERE persons.city_id = cities.id) as tmp1
-    WHERE from_person_id = tmp1.id
-    INTERSECT
-    SELECT transaction_id, name FROM transactions, (SELECT persons.id, name FROM persons, cities WHERE persons.city_id = cities.id) as tmp2
-    WHERE to_person_id = tmp2.id
-    ) )
+   	 SELECT transaction_id, name FROM transactions, (SELECT persons.id, name FROM persons, cities 
+  	 WHERE persons.city_id = cities.id) as tmp1
+   	 WHERE from_person_id = tmp1.id
+  	 INTERSECT
+    	 SELECT transaction_id, name FROM transactions, (SELECT persons.id, name FROM persons, cities 
+    	 WHERE persons.city_id = cities.id) as tmp2
+   	 WHERE to_person_id = tmp2.id
+    	))
