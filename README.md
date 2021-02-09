@@ -27,7 +27,7 @@ a) Dump BD: (test_amasty.sql)  <br>
     ORDER BY `num`  DESC
     LIMIT 1
 
-г) Query
+г) Query "One City Transactions"
 
     SELECT * FROM transactions WHERE transaction_id IN (
     SELECT transaction_id FROM (
