@@ -10,7 +10,7 @@ ON id = person_id
 GROUP BY fullname
 
 
-á)
+Ã¡)
 
 SELECT fullname, SUM(summ) as number from persons 
 LEFT JOIN(
@@ -23,7 +23,7 @@ GROUP BY fullname
 ORDER BY `num` 
 DESC LIMIT 1
 
-â)
+Ã¢)
 
 SELECT * FROM transactions WHERE transaction_id IN (
 SELECT transaction_id FROM (
