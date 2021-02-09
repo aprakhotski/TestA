@@ -1,7 +1,8 @@
 # TestA
 
-5. SQL queries are presented below or in 'txt' file: <br>
-a) [Dump BD](test_amasty.sql)  <br>
+5. SQL queries are presented below or in [SQLqueries.txt](SQLqueries.txt) file: <br>
+
+a) Dump BD: [test_amasty.sql](test_amasty.sql)  <br>
 
 б) Query "Name and Balance":
 
