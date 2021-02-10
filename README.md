@@ -1,29 +1,29 @@
 # TestA
 
-5. SQL queries are presented below or in [SQLqueries.txt](SQLqueries.txt) file: <br>
+5. SQL queries are presented below or in [SQLqueries.txt](Task5/SQLqueries.txt) file: <br>
 
-a) Dump BD: [test_amasty.sql](test_amasty.sql)  <br>
+    a) Dump BD: [test_amasty.sql](Task5/test_amasty.sql)  <br>
 
-б) Query "Name and Balance":
+    б) Query "Name and Balance":
 
-    SELECT fullname, COALESCE(100 - SUM(summ), 100) as balance from persons
-    LEFT JOIN (
-        SELECT from_person_id AS person_id, SUM(amount) as summ FROM transactions GROUP BY from_person_id
-        UNION
-        SELECT to_person_id AS person_id, SUM(-amount) as summ froM transactions GROUP BY to_person_id
-    ) as tempT
-    ON id = person_id
-    GROUP BY fullname
-    
-в) Query "Name and The greatest number of Transactions"
+        SELECT fullname, COALESCE(100 - SUM(summ), 100) as balance from persons
+        LEFT JOIN (
+            SELECT from_person_id AS person_id, SUM(amount) as summ FROM transactions GROUP BY from_person_id
+            UNION
+            SELECT to_person_id AS person_id, SUM(-amount) as summ froM transactions GROUP BY to_person_id
+        ) as tempT
+        ON id = person_id
+        GROUP BY fullname
 
-    SELECT fullname, COUNT(from_person_id) as number FROM persons, transactions 
-    WHERE from_person_id = id  OR to_person_id = id 
-    GROUP BY id 
-    ORDER BY COUNT(from_person_id)
-    DESC LIMIT 1
+    в) Query "Name and The greatest number of Transactions"
 
-г) Query "One City Transactions"
+        SELECT fullname, COUNT(from_person_id) as number FROM persons, transactions 
+        WHERE from_person_id = id  OR to_person_id = id 
+        GROUP BY id 
+        ORDER BY COUNT(from_person_id)
+        DESC LIMIT 1
 
-    SELECT * FROM transactions WHERE
-    (SELECT COUNT(DISTINCT city_id) FROM persons WHERE id IN (from_person_id,to_person_id) ) = 1;
+    г) Query "One City Transactions"
+
+        SELECT * FROM transactions WHERE
+        (SELECT COUNT(DISTINCT city_id) FROM persons WHERE id IN (from_person_id,to_person_id) ) = 1;
