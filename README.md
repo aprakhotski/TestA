@@ -30,13 +30,6 @@ a) Dump BD: [test_amasty.sql](test_amasty.sql)  <br>
 
 г) Query "One City Transactions"
 
-    SELECT * FROM transactions WHERE transaction_id IN (
-    SELECT transaction_id FROM (
-   	 SELECT transaction_id, name FROM transactions, (SELECT persons.id, name FROM persons, cities 
-  	 WHERE persons.city_id = cities.id) as tmp1
-   	 WHERE from_person_id = tmp1.id
-  	 INTERSECT
-    	 SELECT transaction_id, name FROM transactions, (SELECT persons.id, name FROM persons, cities 
-    	 WHERE persons.city_id = cities.id) as tmp2
-   	 WHERE to_person_id = tmp2.id
-    	))
+	SELECT * FROM transactions WHERE
+	(SELECT city_id FROM persons WHERE id = from_person_id) = 
+	(SELECT city_id FROM persons WHERE id = to_person_id);
