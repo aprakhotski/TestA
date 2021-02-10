@@ -11,7 +11,7 @@
 	<body >
 		<div class="container">
 			<div class="row">
-				<div >	
+				<div>	
 					<h1>Банкомат</h1>					 
 					<form action="form.php" method="post">
 						<p>Номинал в наличии:</p>
