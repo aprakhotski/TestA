@@ -1,4 +1,4 @@
-# TestA
+# TestAmasty
 1. Task Stroop effect: [Task2](Task2)<br>
 
 2. Task ATM machine: [Task3](Task3)<br>
