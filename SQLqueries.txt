@@ -12,15 +12,10 @@ GROUP BY fullname
 
 в)
 
-SELECT fullname, SUM(summ) as number from persons 
-LEFT JOIN(
-	SELECT from_person_id AS person_id, COUNT(amount) as summ FROM transactions GROUP BY from_person_id 
-	UNION ALL 
-	SELECT to_person_id AS person_id, COUNT(amount) as summ froM transactions GROUP BY to_person_id 
-	) as tempT 
-ON persons.id = tempT.person_id 
-GROUP BY fullname 
-ORDER BY `num` 
+SELECT fullname, COUNT(from_person_id) as number FROM persons, transactions 
+WHERE from_person_id = id  OR to_person_id = id 
+GROUP BY id 
+ORDER BY COUNT(from_person_id) 
 DESC LIMIT 1
 
 г)
