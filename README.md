@@ -4,9 +4,7 @@
 2. Task ATM machine: [Task3](Task3)<br>
 
 5. Task SQL: [Task5](Task5)<br>
-   
-   Queries are presented below or in [Task5/SQLqueries.txt](Task5/SQLqueries.txt)<br>
-   
+     
     a) Dump BD: [Task5/test_amasty.sql](Task5/test_amasty.sql)  <br>
 
     б) Query "Name and Balance":
