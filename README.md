@@ -31,5 +31,4 @@ a) Dump BD: [test_amasty.sql](test_amasty.sql)  <br>
 г) Query "One City Transactions"
 
 	SELECT * FROM transactions WHERE
-	(SELECT city_id FROM persons WHERE id = from_person_id) = 
-	(SELECT city_id FROM persons WHERE id = to_person_id);
+	(SELECT COUNT(DISTINCT city_id) FROM persons WHERE id IN (from_person_id,to_person_id) ) = 1;
