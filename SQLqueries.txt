@@ -25,6 +25,6 @@ DESC LIMIT 1
 
 г)
 
-	SELECT * FROM transactions WHERE
-	(SELECT city_id FROM persons WHERE id = from_person_id) = 
-	(SELECT city_id FROM persons WHERE id = to_person_id);
+SELECT * FROM transactions WHERE
+(SELECT city_id FROM persons WHERE id = from_person_id) = 
+(SELECT city_id FROM persons WHERE id = to_person_id);
