@@ -1,8 +1,12 @@
 # TestA
+2. Task Stroop effect: [Task2](Task2)<br>
 
-5. SQL queries are presented below or in [SQLqueries.txt](Task5/SQLqueries.txt) file: <br>
+3. Task ATM machine: [Task3](Task3)<br>
 
-    a) Dump BD: [test_amasty.sql](Task5/test_amasty.sql)  <br>
+5. Task SQL: [Task5](Task5)<br>
+   
+   Queries are presented below or in [Task5/SQLqueries.txt](Task5/SQLqueries.txt)<br>
+    a) Dump BD: [Task5/test_amasty.sql](Task5/test_amasty.sql)  <br>
 
     б) Query "Name and Balance":
 
