@@ -9,7 +9,6 @@ LEFT JOIN (
 ON id = person_id
 GROUP BY fullname
 
-
 в)
 
 SELECT fullname, COUNT(from_person_id) as number FROM persons, transactions 
