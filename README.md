@@ -7,4 +7,4 @@
      
     a) Dump BD: [Task5/test_amasty.sql](Task5/test_amasty.sql)  <br>
 
-    б) SQL queries: [Task5/SQLqueries.txt.sql](Task5/SQLqueries.txt.sql)
+    б) SQL queries: [Task5/SQLqueries.txt](Task5/SQLqueries.txt)
